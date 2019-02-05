@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.App-link {
+  color: #61dafb;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+a:link,a:visited{
+  text-decoration: none;
+}
+.modal{
+  background-color: rgba(0,0,0, .8);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top:0px;
+  left:0px;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+}
+.modal-contant{
+  width:350px;
+  height:310px;
+  background-color: #fff;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  padding: 2em;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+}
+.model-close{
+  color: #363636;
+  font-size: 2em;
+  position: absolute;
+  top:.5em;
+  right: 1em;
+}
+.modal-heading{
+  color: dodgerblue;
+}
+.modal-contant .inputbox{
+  position: relative; 
+}
+.modal-contant .inputbox input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color:#000;
+  margin-bottom: 30px;
+}
+.modal-contant .inputbox input:valid{
+  background-image: url(yes.jpg);
+  background-repeat:no-repeat;
+  background-position:right;
+  background-size:10px;
+}
+.modal-contant .inputbox input:invalid{
+  background-image: url(Remove-icon.png);
+  background-repeat:no-repeat;
+  background-position:right;
+  background-size:10px;
+}
+.modal-contant .inputbox label{
+  position: absolute;
+  top:0;
+  left:0;
+  padding: 10px 0;
+  font-size: 16px;
+  color:#000;
+  pointer-events: none;
+  transition: .5s;
+}
+.modal-contant .inputbox input:focus ~ label,
+.modal-contant .inputbox input:valid ~ label
+{
+  top:-18px;
+  left:2PX;
+  color:#f7497d;
+  font-size:12px;
+  position:absolute;
+  background:#fff;
+  height:8px;
+}
+.modal-contant input[type="submit"]
+{
+  background: transparent;
+  width: 353px;
+  height: 40px;
+  border:none;
+  outline: none;
+  padding: 10px 20px;
+  color: #fff;
+  background:#f7497d;
+  cursor: pointer;
+}
+#modal:target{
+  opacity: 1;
+  visibility: visible;
+}
+#modal:target .modal-contant{
+  opacity: 1;
+  visibility: visible;
+} 
+
+.modal-open{
+  display: inline-block;
+  color: dodgerblue;
+  position: absolute;
+  top:0px;
+  right:2em;
+  margin:2em;
+}
